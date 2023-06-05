@@ -23,6 +23,7 @@ urlpatterns = [
     path('saludar/', views.saludo),
     path('otra-vista/',views.segunda_vista),
     path('nombre/<nombre>/<apellido>/',views.nombre),
-    path("miTemplate/",views.probando_template),
+    #path("miTemplate/",views.probando_template),
     path("miTemplate2/", views.probando_template2),
+    path("miTemplate/", views.probando_templates_render)
 ]

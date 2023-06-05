@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-# from django.template import Context, Template 
+#from django.template import Context, Template 
 
 def saludo(request):
 	return HttpResponse("Hola Django - Coder")
@@ -10,6 +10,7 @@ def nombre(request, nombre:str, apellido:str):
 	nombre = nombre.capitalize()
 	apellido = apellido.capitalize()
 	return HttpResponse(f"{apellido},{nombre}")
+
 """
 def probando_template(request):
 	mi_html = open("./templates/template1.html",encoding="utf-8")
@@ -22,6 +23,7 @@ def probando_template(request):
 	mi_documento = mi_template.render(mi_contexto)
 	return HttpResponse(mi_documento)
 """
+
 def probando_templates_render (request):
 	nombre = "Louis"
 	apellido = "Van Beethoven"
@@ -30,6 +32,6 @@ def probando_templates_render (request):
 def probando_template2(request):
 	lista_de_notas = [2, 2, 3, 7, 5]
 	contexto = {"notas":lista_de_notas}
-	return render(request, "templete2.html", contexto)
+	return render(request, "template2.html", contexto)
 
 
